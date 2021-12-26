@@ -1,0 +1,349 @@
+/* reset all  */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0px auto;
+}
+/* start header  */
+header{
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    border-bottom: solid 0.5px white;
+}
+.header_container{
+    background-color: transparent;
+    width: 80%;
+    height: 100%;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    align-items: center;
+}
+.header_container a{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+
+}
+.header_logo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+header nav a{
+    margin-right: 20px;
+    font-size: 1.7rem;
+}
+header nav a:hover, nav .active{
+    color: #e62b4a;
+}
+
+
+.carousel{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../image-video/home_slider.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-content{
+    width: 50%;
+    text-align: center;
+    color: white;
+}
+.carousel-content p{
+    font-size: 2rem;
+}
+.carousel-content h2{
+    font-size: 3rem;
+    margin: 12px 0px;
+}
+.carousel-content button{
+    border: none;
+    color: white;
+    background-color: #e62b4a;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+}
+.carousel .animation-icon i{
+    font-size: 2rem;
+    color: white;
+    animation: animationTranslateY 1.2s ease-out 0s infinite;
+
+}
+
+@keyframes animationTranslateY{
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    } to{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+/* service */
+.service{
+    background-color: black;
+    padding: 100px;
+}
+.service-title{
+    text-align: center;
+}
+.service-title p:first-of-type{
+    color: #e62b4a  ;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.service-title p:last-of-type{
+    color: #888888;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.service-title h2{
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+
+    /* service-slider */
+.service-slider{
+    color: white;
+    margin-top: 30px;
+}
+.slick-dots{
+    bottom: -40px;
+}
+.slick-dots li{
+    margin: 0px 3px;
+}
+.slick-dots li button:before{
+    background-color: #a0a0a0;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+}
+.slick-dots li:hover button::before{
+    background-color: white;
+}
+.slick-dots li.slick-active button:before{
+    background-color: #e62b4a;
+    border-radius: 50%;
+    opacity: 1;
+}
+.slick-dots li button:before{
+    content: "";
+}
+    /* service-slider */
+.slider-item{
+    background-color: white;
+    color: grey;
+    height: 210px;
+    margin: 0px 10px;
+}
+.item-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.item-content::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background-color: red;
+    right: 0px;
+    top: -100%;
+    transition: 0.3s;
+}
+.item-content:hover::before {
+    top: 0%;
+}
+
+
+/* showcase */
+.showcase{
+    padding: 10% 0%;
+}
+.showcase-item img{
+    filter: grayscale(100%) contrast(50%);
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.showcase .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.showcase-item {
+    position: relative;
+    height: 450px;
+}
+.showcase-overlay{
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    transition: 0.5s;
+}
+.showcase-overlay a{
+    color: black;
+}
+.showcase-overlay:hover{
+    opacity: 1;
+}
+.overlay-icon:hover{
+    background-color: black;
+    color: white;
+}
+.overlay-icon{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+.overlay-title{
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+.overlay-title h2{
+    color: white;
+    font-weight: lighter;
+    font-size: 15px;
+}
+.overlay-title{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.showcase-overlay:hover .overlay-icon, .showcase-overlay:hover .overlay-title{
+    transform: translateY(0);
+}
+
+
+
+/* blog  */
+    /* start blog  */
+.blog{
+    margin-bottom: 10%;
+}
+.blog-item img{
+    display: block;
+    width: 100%;
+    filter: grayscale(30%) contrast(50%);
+    transition: 1s;
+    cursor: pointer;
+}
+.blog img:hover{
+    filter: grayscale(0%);
+}
+.blog-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.image1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.image10{
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+}
+
+
+/* start number  */
+.number{
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 100px 0px;
+}
+.number-content{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.number-item span{
+    font-size: 3rem;
+}
+/* end-number  */
+
+
+
+/* contact  */
+
+.contact{
+    padding: 50px 0px;
+}
+.contact-content{
+    display: flex;
+    height: 400px;
+}
+.contact-left{
+    width: 60%;
+    padding-right: 20px;
+}
+.contact-left iframe{
+    width: 100%;
+    height: 100%;
+}
+.contact-right{
+    width: 40%;
+    height: 100%;
+}
+
+.contact-form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contact-form input, .contact-form button{
+    height: 50px;
+}
+.contact-form button{
+    background-color: black;
+    color: white;
+}
+.contact-form input{
+    padding: 0px 10px;
+}
